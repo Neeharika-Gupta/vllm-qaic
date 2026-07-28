@@ -1,0 +1,1 @@
+export QAIC_DEBUG=1

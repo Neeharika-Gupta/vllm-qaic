@@ -119,7 +119,7 @@ ARG VLLM_TARGET_DEVICE_AOT="empty"
 # triton-cpu — shared by aot-base, installed BEFORE vllm so vllm sees it.
 # Set TRITON_CPU=0 to skip (faster builds when not needed).
 # ---------------------------------------------------------------------------
-ARG TRITON_CPU="1"
+ARG TRITON_CPU="0"
 ARG TRITON_CPU_COMMIT="e60f448f8f197073b75d6d3e77347414a5db3ee7"
 ARG TRITON_CPU_COMPILE_MAX_JOBS="4"
 
@@ -243,7 +243,7 @@ ARG QEFF_BRANCH="release/v1.22.0"
 ARG TORCH_VERSION_AOT="2.7.0+cpu"
 ARG TORCHVISION_VERSION_AOT="0.22.0+cpu"
 ARG VLLM_TARGET_DEVICE_AOT="empty"
-ARG TRITON_CPU="1"
+ARG TRITON_CPU="0"
 ARG TRITON_CPU_COMMIT="e60f448f8f197073b75d6d3e77347414a5db3ee7"
 ARG TRITON_CPU_COMPILE_MAX_JOBS="4"
 ARG VLLM_BUILD_RUST="1"

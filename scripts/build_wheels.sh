@@ -199,6 +199,7 @@ build_aot_wheel() {
     echo "=== Building AOT wheel (pure Python, py3-none-any — pyver-independent) ==="
     run_echo docker buildx build --target wheel -f "${DOCKER_DIR}/Dockerfile.aot" \
         --build-arg PYTHON_VERSION="${PYTHON_VERSION}" \
+        --build-arg TRITON_CPU=0 \
         "${BASE_IMAGE_ARGS[@]}" \
         "${RUST_IMAGE_ARGS[@]}" \
         "${WHEEL_NAME_ARGS[@]}" \
